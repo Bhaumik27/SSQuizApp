@@ -13,10 +13,13 @@
         android:theme="@style/Theme.MyQuizApp"
         tools:targetApi="31">
         <activity
-            android:name="com.ssnsp.myquizapp.SelectStd"
+            android:name=".FinalResultActivity"
             android:exported="false" />
         <activity
-            android:name="com.ssnsp.myquizapp.MainActivity"
+            android:name=".SelectStd"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ssnsp.myquizapp.SecondActivity" />
+        <activity android:name=".SecondActivity" />
     </application>
 
 </manifest>
