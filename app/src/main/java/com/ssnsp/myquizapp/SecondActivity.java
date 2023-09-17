@@ -1,4 +1,4 @@
-package com.example.myquizapp;
+package com.ssnsp.myquizapp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -6,7 +6,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.myquizapp.Question;
+
+import com.ssnsp.myquizapp.R;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {

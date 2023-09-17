@@ -1,5 +1,5 @@
 
-package com.example.myquizapp;
+package com.ssnsp.myquizapp;
 
 public class Question {
     private String question;
