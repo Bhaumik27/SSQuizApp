@@ -36,6 +36,18 @@
             android:layout_height="wrap_content"
             android:text="Option 2"/>
 
+        <RadioButton
+            android:id="@+id/option3RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 3"/>
+
+        <RadioButton
+            android:id="@+id/option4RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 4"/>
+
         <!-- Add more options if needed -->
 
     </RadioGroup>
