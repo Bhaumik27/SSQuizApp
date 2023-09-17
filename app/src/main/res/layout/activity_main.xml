@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/fstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="સામાજિક વિજ્ઞાન ક્વિઝ એપ "
+        android:layout_above="@+id/fctext"
+        android:textSize="24sp" /> <!-- Center horizontally and vertically -->
+
+    <TextView
+        android:id="@+id/fctext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="એપ નિર્માણ"
+        android:layout_above="@+id/fntext"
+        android:textSize="24sp" /> <!-- Center horizontally and vertically -->
+
+    <TextView
+        android:id="@+id/fntext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="નગીનકુમાર એસ. પંચાલ"
+        android:layout_above="@+id/ftext"
+        android:textSize="24sp" /> <!-- Center horizontally and vertically -->
+
+
+    <TextView
+        android:id="@+id/ftext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="જાબવર્ગ પ્રાથમિક શાળા"
+        android:textSize="24sp" /> <!-- Center horizontally and vertically -->
+
+    <TextView
+        android:id="@+id/f2text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ftext"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="તાલુકો-ભિલોડા, જિલ્લો-અરવલ્લી"
+        android:textSize="20sp" /> <!-- Center horizontally, below ftext TextView -->
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/f2text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Start"
+        android:textSize="20sp" /> <!-- Center horizontally, below f2text TextView, and 40dp below -->
+
+</RelativeLayout>

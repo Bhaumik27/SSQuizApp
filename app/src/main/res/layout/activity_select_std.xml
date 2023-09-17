@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SelectStd">
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/l6"
+        android:layout_centerInParent="true"
+        android:text="Std-6"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:id="@+id/l6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv7"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btn6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sem-1"/>
+        <Button
+            android:id="@+id/btn6_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Sem-2"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Std-7"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:id="@+id/l7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv7"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btn7_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sem-1"/>
+        <Button
+            android:id="@+id/btn7_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Sem-2"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l7"
+        android:layout_centerInParent="true"
+        android:text="Std-8"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:id="@+id/l8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv8"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btn8_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sem-1"/>
+        <Button
+            android:id="@+id/btn8_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Sem-2"/>
+    </LinearLayout>
+</RelativeLayout>
