@@ -1,4 +1,5 @@
 package com.ssnsp.myquizapp;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -78,7 +79,9 @@ public class SecondActivity extends AppCompatActivity {
                 answerRadioGroup.clearCheck();
             } else {
                 // Quiz completed
-                Toast.makeText(this, "Quiz completed!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Quiz completed!", Toast.LENGTH_SHORT).show();
+                Intent intent  = new Intent(SecondActivity.this,FinalResultActivity.class);
+                startActivity(intent);
             }
         } else {
             // No answer selected
