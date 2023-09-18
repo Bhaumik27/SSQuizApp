@@ -35,8 +35,8 @@ public class QuizResultAdapter extends RecyclerView.Adapter<QuizResultAdapter.Vi
         holder.textQuestionNumber.setText("Q" + (position + 1) + ".");
         holder.textQuestionText.setText(quizResultItem.getQuestion());
 
-        holder.radioButtonOption1.setText(quizResultItem.getChoice1());
-        holder.radioButtonOption2.setText(quizResultItem.getChoice2());
+        holder.radioButtonOption1.setText(quizResultItem.getOpt_A());
+        holder.radioButtonOption2.setText(quizResultItem.getOpt_B());
 
        /* int selectedOptionIndex = quizResultItem.getSelectedOptionIndex();
         if (selectedOptionIndex != -1) {

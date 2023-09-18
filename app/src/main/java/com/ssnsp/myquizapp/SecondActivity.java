@@ -29,7 +29,7 @@ public class SecondActivity extends AppCompatActivity {
 
     // Define your quiz questions and answers
     private String[] questions = {"Who is Srk?", "India renamed to ?", "Who is PM of BHARAT?"};
-    private String[] correctAnswers = {"Answer 1", "Answer 2", "Answer 3"};
+    private String[] correctAnswers = {"Correct Answer 1", "Correct Answer 2", "Correct Answer 3", "Correct Answer 4", "Correct Answer 5", "Correct Answer 6", "Correct Answer 7", "Correct Answer 8", "Correct Answer 9", "Correct Answer 10"};
 
     private String[] optionAnswers = {"Answer 1", "Answer 2", "Answer 3","Answer 4", "Answer 5", "Answer 6"};
 
@@ -59,6 +59,7 @@ public class SecondActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("SecondActivity", "questionsList size: " + questionsList.size());
                 checkAnswer();
             }
         });
@@ -76,10 +77,10 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton radioButtonC = findViewById(R.id.option3RadioButton);
             RadioButton radioButtonD = findViewById(R.id.option4RadioButton);
 
-            radioButtonA.setText(question.getChoice1());
-            radioButtonB.setText(question.getChoice2());
-            radioButtonC.setText(question.getChoice3());
-            radioButtonD.setText(question.getChoice4());
+            radioButtonA.setText(question.getOpt_A());
+            radioButtonB.setText(question.getOpt_B());
+            radioButtonC.setText(question.getOpt_C());
+            radioButtonD.setText(question.getOpt_D());
 
             currentQuestionIndex++;
         } else {
@@ -104,9 +105,7 @@ public class SecondActivity extends AppCompatActivity {
             }
 
             // Move to the next question
-            currentQuestionIndex++;
-
-            if (currentQuestionIndex < questions.length) {
+            if (currentQuestionIndex < questionsList.size()) {
                 displayQuestion();
                 answerRadioGroup.clearCheck();
             } else {
@@ -115,11 +114,13 @@ public class SecondActivity extends AppCompatActivity {
                 Intent intent  = new Intent(SecondActivity.this,FinalResultActivity.class);
                 startActivity(intent);
             }
+            currentQuestionIndex++; // Move it here
         } else {
             // No answer selected
             Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show();
         }
     }
+
     private void firebaseQuestion() {
         try {
             myRef.child("Questions").addListenerForSingleValueEvent(new ValueEventListener() {
