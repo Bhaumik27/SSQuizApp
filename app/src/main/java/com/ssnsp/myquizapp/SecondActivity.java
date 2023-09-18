@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.ssnsp.myquizapp.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -53,7 +52,6 @@ public class SecondActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submitButton);
         database= FirebaseDatabase.getInstance("https://ss-quiz-app-default-rtdb.asia-southeast1.firebasedatabase.app/");
         myRef=database.getReference();
-        displayQuestion();
         firebaseQuestion();
 
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -81,8 +79,6 @@ public class SecondActivity extends AppCompatActivity {
             radioButtonB.setText(question.getOpt_B());
             radioButtonC.setText(question.getOpt_C());
             radioButtonD.setText(question.getOpt_D());
-
-            currentQuestionIndex++;
         } else {
             Log.d("SecondActivity:", "All questions displayed");
         }
@@ -95,8 +91,8 @@ public class SecondActivity extends AppCompatActivity {
         if (selectedRadioButtonId != -1) {
             RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
             String selectedAnswer = selectedRadioButton.getText().toString();
-
-            if (selectedAnswer.equals(correctAnswers[currentQuestionIndex])) {
+            Question question = questionsList.get(currentQuestionIndex);
+            if (selectedAnswer.equals(question.getAnswer())) {
                 // Correct answer
                 Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
             } else {
@@ -105,7 +101,8 @@ public class SecondActivity extends AppCompatActivity {
             }
 
             // Move to the next question
-            if (currentQuestionIndex < questionsList.size()) {
+            if (currentQuestionIndex < questionsList.size() - 1) {
+                currentQuestionIndex++; // Move it here
                 displayQuestion();
                 answerRadioGroup.clearCheck();
             } else {
@@ -114,7 +111,6 @@ public class SecondActivity extends AppCompatActivity {
                 Intent intent  = new Intent(SecondActivity.this,FinalResultActivity.class);
                 startActivity(intent);
             }
-            currentQuestionIndex++; // Move it here
         } else {
             // No answer selected
             Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show();
