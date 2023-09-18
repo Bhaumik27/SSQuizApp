@@ -19,6 +19,9 @@ import com.ssnsp.myquizapp.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SecondActivity extends AppCompatActivity {
     private TextView questionTextView;
     private RadioGroup answerRadioGroup;
@@ -34,6 +37,8 @@ public class SecondActivity extends AppCompatActivity {
     private int currentoptionIndex = 0;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
+    private List<Question> questionsList = new ArrayList<>();
+
 
 
     @Override
@@ -60,15 +65,28 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void displayQuestion() {
-        questionTextView.setText(questions[currentQuestionIndex]);
+        if (currentQuestionIndex < questionsList.size()) {
+            Question question = questionsList.get(currentQuestionIndex);
 
-        // Dynamically populate RadioButtons with answer choices
-        for (int i = 0; i < answerRadioGroup.getChildCount(); i++) {
-            RadioButton radioButton = (RadioButton) answerRadioGroup.getChildAt(i);
-            radioButton.setText(optionAnswers[currentoptionIndex]);
-            currentoptionIndex++;
+            questionTextView.setText(question.getQuestion());
+
+            // Populate RadioButtons with answer choices
+            RadioButton radioButtonA = findViewById(R.id.option1RadioButton);
+            RadioButton radioButtonB = findViewById(R.id.option2RadioButton);
+            RadioButton radioButtonC = findViewById(R.id.option3RadioButton);
+            RadioButton radioButtonD = findViewById(R.id.option4RadioButton);
+
+            radioButtonA.setText(question.getChoice1());
+            radioButtonB.setText(question.getChoice2());
+            radioButtonC.setText(question.getChoice3());
+            radioButtonD.setText(question.getChoice4());
+
+            currentQuestionIndex++;
+        } else {
+            Log.d("SecondActivity:", "All questions displayed");
         }
     }
+
 
     private void checkAnswer() {
         int selectedRadioButtonId = answerRadioGroup.getCheckedRadioButtonId();
@@ -102,26 +120,21 @@ public class SecondActivity extends AppCompatActivity {
             Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show();
         }
     }
-    private void firebaseQuestion(){
+    private void firebaseQuestion() {
         try {
             myRef.child("Questions").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-
                     if (dataSnapshot.exists()) {
-
                         for (DataSnapshot questionSnapshot : dataSnapshot.getChildren()) {
-                            String question = questionSnapshot.child("question").getValue(String.class);
-                            String answer = questionSnapshot.child("answer").getValue(String.class);
-                            String optionsA = questionSnapshot.child("opt_A").getValue(String.class);
-                            String optionsB = questionSnapshot.child("opt_B").getValue(String.class);
-                            String optionsC = questionSnapshot.child("opt_C").getValue(String.class);
-                            String optionsD = questionSnapshot.child("opt_D").getValue(String.class);
-
-
-                            Log.d("SecondActivity:", "Question: " + question + ", Answer: " + answer +
-                                                                "optionA: " + optionsA);
+                            Question question = questionSnapshot.getValue(Question.class);
+                            if (question != null) {
+                                questionsList.add(question);
+                            }
                         }
+
+                        // Start displaying questions
+                        displayQuestion();
                     } else {
                         Log.d("SecondActivity:", "No data");
                     }
@@ -129,12 +142,14 @@ public class SecondActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-                    Log.d("SecondActivity:", "No error");            }
+                    Log.d("SecondActivity:", "No error");
+                }
             });
-
-        }catch (Exception e){
-            Log.d("SecondActivity:", "No error" + e);            }
+        } catch (Exception e) {
+            Log.d("SecondActivity:", "Error: " + e.getMessage());
+        }
     }
+
 
 }
 

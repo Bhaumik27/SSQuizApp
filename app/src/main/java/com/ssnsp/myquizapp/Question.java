@@ -3,15 +3,20 @@ package com.ssnsp.myquizapp;
 
 public class Question {
     private String question;
-    private String choice1;
-    private String choice2;
-    private String correctAnswer;
+    private String answer;
+    private String optionA;
+    private String optionB;
+    private String optionC;
+    private String optionD;
 
-    public Question(String question, String choice1, String choice2) {
+
+    public Question(String question, String choice1, String choice2,String choice3,String choice4) {
         this.question = question;
-        this.choice1 = choice1;
-        this.choice2 = choice2;
-        this.correctAnswer = choice1; // Set the correct answer here
+        this.optionA = choice1;
+        this.optionB = choice2;
+        this.optionC = choice3;
+        this.optionD = choice4;
+        this.answer = choice1; // Set the correct answer here
     }
 
     public String getQuestion() {
@@ -19,14 +24,23 @@ public class Question {
     }
 
     public String getChoice1() {
-        return choice1;
+        return optionA;
     }
 
     public String getChoice2() {
-        return choice2;
+        return optionB;
+    }
+    public String getChoice3() {
+        return optionC;
+    }
+
+    public String getChoice4() {
+        return optionD;
     }
 
     public String getCorrectAnswer() {
-        return correctAnswer;
+        return answer;
     }
 }
+
+
