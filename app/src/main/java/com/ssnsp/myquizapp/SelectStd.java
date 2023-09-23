@@ -27,7 +27,9 @@ public class SelectStd extends AppCompatActivity {
         btn6_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                /*Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                startActivity(intent);*/
+                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
                 startActivity(intent);
             }
         });

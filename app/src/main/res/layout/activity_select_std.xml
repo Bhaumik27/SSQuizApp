@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ssnsp.myquizapp.SelectStd">
+    tools:context="com.ssnsp.myquizapp.SelectStd"
+    android:background="@drawable/gradient_drawable">
 
     <TextView
         android:id="@+id/tv6"
@@ -14,6 +15,7 @@
         android:layout_above="@id/l6"
         android:layout_centerInParent="true"
         android:text="Std-6"
+        android:textColor="@color/white"
         android:textSize="20sp" />
     <LinearLayout
         android:id="@+id/l6"
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="Std-7"
+        android:textColor="@color/white"
         android:textSize="20sp" />
     <LinearLayout
         android:id="@+id/l7"
@@ -69,6 +72,7 @@
         android:layout_below="@id/l7"
         android:layout_centerInParent="true"
         android:text="Std-8"
+        android:textColor="@color/white"
         android:textSize="20sp" />
     <LinearLayout
         android:id="@+id/l8"

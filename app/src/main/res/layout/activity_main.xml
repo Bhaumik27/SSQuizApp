@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ssnsp.myquizapp.MainActivity">
+    tools:context="com.ssnsp.myquizapp.MainActivity"
+    android:background="@drawable/gradient_drawable">
 
     <TextView
         android:id="@+id/fstext"
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="સામાજિક વિજ્ઞાન ક્વિઝ એપ "
+        android:textColor="@color/white"
         android:layout_above="@+id/fctext"
         android:textSize="24sp" /> <!-- Center horizontally and vertically -->
 
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="એપ નિર્માણ"
+        android:textColor="@color/white"
         android:layout_above="@+id/fntext"
         android:textSize="24sp" /> <!-- Center horizontally and vertically -->
 
@@ -30,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="નગીનકુમાર એસ. પંચાલ"
+        android:textColor="@color/white"
         android:layout_above="@+id/ftext"
         android:textSize="24sp" /> <!-- Center horizontally and vertically -->
 
@@ -40,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="જાબવર્ગ પ્રાથમિક શાળા"
+        android:textColor="@color/white"
         android:textSize="24sp" /> <!-- Center horizontally and vertically -->
 
     <TextView
@@ -50,6 +55,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:text="તાલુકો-ભિલોડા, જિલ્લો-અરવલ્લી"
+        android:textColor="@color/white"
         android:textSize="20sp" /> <!-- Center horizontally, below ftext TextView -->
 
     <Button

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    <color name="color_primary">#FF311c50</color>-->
+    <color name="color_primary">#FF292949</color>
+    <color name="color_primaryDark">#FF2b1946</color>
+    <color name="colorAccent">#FFFFFFFF</color>
+    <color name="textcolor_primary">#FFFFFFFF</color>
+    <color name="navigationBarColor">#FF513973</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="lightGreen">#FF536976</color>
+    <color name="darkblue">#FF292e49</color>
 </resources>
