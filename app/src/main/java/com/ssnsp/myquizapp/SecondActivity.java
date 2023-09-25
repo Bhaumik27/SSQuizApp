@@ -23,6 +23,7 @@ import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
     private TextView questionTextView;
+    private TextView pointTextView;
     private RadioGroup answerRadioGroup;
     private Button submitButton;
 
@@ -48,6 +49,7 @@ public class SecondActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         questionTextView = findViewById(R.id.questionTextView);
+        pointTextView = findViewById(R.id.pointTextView);
         answerRadioGroup = findViewById(R.id.radioGroup);
         submitButton = findViewById(R.id.submitButton);
         database= FirebaseDatabase.getInstance("https://ss-quiz-app-default-rtdb.asia-southeast1.firebasedatabase.app/");

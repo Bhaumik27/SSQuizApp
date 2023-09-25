@@ -1,6 +1,12 @@
 package com.ssnsp.myquizapp;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -25,5 +31,14 @@ public class ChapterViewActivity extends AppCompatActivity {
         arr = new ArrayAdapter<String>(
                 this, R.layout.chapter_list_row,R.id.chapter_row, tutorials);
         listview.setAdapter(arr);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(ChapterViewActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

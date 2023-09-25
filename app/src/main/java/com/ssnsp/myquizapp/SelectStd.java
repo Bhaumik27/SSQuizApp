@@ -29,6 +29,7 @@ public class SelectStd extends AppCompatActivity {
             public void onClick(View view) {
                 /*Intent intent = new Intent(SelectStd.this,SecondActivity.class);
                 startActivity(intent);*/
+
                 Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
                 startActivity(intent);
             }
