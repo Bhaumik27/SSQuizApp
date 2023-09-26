@@ -8,7 +8,7 @@
     <style name="Theme.MyQuizApp" parent="Base.Theme.MyQuizApp" />
 
     <style name="Theme.MyQuizApp.AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/darkblue</item>
+        <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>

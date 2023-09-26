@@ -39,6 +39,7 @@ public class SecondActivity extends AppCompatActivity {
     private DatabaseReference myRef;
     private List<Question> questionsList = new ArrayList<>();
 
+    private int counter= 0;
 
 
     @Override
@@ -96,6 +97,9 @@ public class SecondActivity extends AppCompatActivity {
             Question question = questionsList.get(currentQuestionIndex);
             if (selectedAnswer.equals(question.getAnswer())) {
                 // Correct answer
+                counter++;
+                String point ="0"+ String.valueOf(counter);
+                pointTextView.setText(point);
                 Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
             } else {
                 // Incorrect answer
