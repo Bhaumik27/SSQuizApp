@@ -1,7 +1,9 @@
 
 package com.ssnsp.myquizapp;
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable {
     private String question;
     private String opt_A;
     private String opt_B;

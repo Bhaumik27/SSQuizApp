@@ -18,6 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,8 +99,16 @@ public class SecondActivity extends AppCompatActivity {
             if (selectedAnswer.equals(question.getAnswer())) {
                 // Correct answer
                 counter++;
-                String point ="0"+ String.valueOf(counter);
-                pointTextView.setText(point);
+                if(counter >= 10){
+                    String point = String.valueOf(counter);
+                    pointTextView.setText(point);
+                }
+                else{
+                    String point ="0"+ String.valueOf(counter);
+                    pointTextView.setText(point);
+                }
+                //String point ="0"+ String.valueOf(counter);
+                //pointTextView.setText(point);
                 Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
             } else {
                 // Incorrect answer
@@ -115,6 +124,8 @@ public class SecondActivity extends AppCompatActivity {
                 // Quiz completed
                 //Toast.makeText(this, "Quiz completed!", Toast.LENGTH_SHORT).show();
                 Intent intent  = new Intent(SecondActivity.this,FinalResultActivity.class);
+                intent.putExtra("QuestionList", (Serializable) questionsList);
+                intent.putExtra("CorrectCount", pointTextView.getText());
                 startActivity(intent);
             }
         } else {

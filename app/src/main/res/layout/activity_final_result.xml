@@ -4,34 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FinalResultActivity">
+    tools:context=".FinalResultActivity"
+    android:background="@drawable/gradient_drawable">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Correct Answer: 0"
-        android:padding="10dp"
-        android:gravity="center"
-        android:background="#96C291"/>
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Wrong Answer: 0"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:gravity="center"
-        android:background="#C63D2F"/>
+        <TextView
+            android:id="@+id/correct_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct Answer:"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="#96C291"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Total Marks: 0"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:gravity="center"
-        android:background="#96C291"/>
+        <TextView
+            android:id="@+id/wrong_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wrong Answer:"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="#C63D2F"/>
+
+        <TextView
+            android:id="@+id/total_marks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Marks:"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="#96C291"/>
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btnRestart"
@@ -41,10 +55,18 @@
         android:layout_marginTop="20dp"
         android:text="Restart"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="vertical"/>
+    </ScrollView>
+
+
 
 </LinearLayout>
