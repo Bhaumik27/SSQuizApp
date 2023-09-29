@@ -12,8 +12,11 @@ import com.ssnsp.myquizapp.R;
 public class SelectStd extends AppCompatActivity {
 
     private Button btn6_1;
+    private Button btn6_2;
     private Button btn7_1;
+    private Button btn7_2;
     private Button btn8_1;
+    private Button btn8_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +24,11 @@ public class SelectStd extends AppCompatActivity {
         setContentView(R.layout.activity_select_std);
 
         btn6_1 = findViewById(R.id.btn6_1);
+        btn6_2 = findViewById(R.id.btn6_2);
         btn7_1 = findViewById(R.id.btn7_1);
+        btn7_2 = findViewById(R.id.btn7_2);
         btn8_1 = findViewById(R.id.btn8_1);
+        btn8_2 = findViewById(R.id.btn8_2);
 
         btn6_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +37,18 @@ public class SelectStd extends AppCompatActivity {
                 startActivity(intent);*/
 
                 Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
+                intent.putExtra("Std6_1", "Std6 Sem-1");
+                startActivity(intent);
+            }
+        });
+        btn6_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                startActivity(intent);*/
+
+                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
+                intent.putExtra("Std6_2", "Std6 Sem-2");
                 startActivity(intent);
             }
         });
@@ -39,6 +57,15 @@ public class SelectStd extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                intent.putExtra("Std7_1", "Std7 Sem-1");
+                startActivity(intent);
+            }
+        });
+        btn7_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                intent.putExtra("Std7_2", "Std7 Sem-2");
                 startActivity(intent);
             }
         });
@@ -47,6 +74,15 @@ public class SelectStd extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                intent.putExtra("Std8_1", "Std8 Sem-1");
+                startActivity(intent);
+            }
+        });
+        btn8_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
+                intent.putExtra("Std8_2", "Std8 Sem-2");
                 startActivity(intent);
             }
         });

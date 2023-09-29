@@ -61,6 +61,7 @@ public class FinalResultActivity extends AppCompatActivity {
             }
         });
     }
+
     @SuppressLint("SetTextI18n")
     private void totalQuestion() {
         int quizResultItem = questionsList.size();

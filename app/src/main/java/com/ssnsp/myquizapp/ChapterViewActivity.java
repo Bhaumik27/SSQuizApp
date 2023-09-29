@@ -27,6 +27,10 @@ public class ChapterViewActivity extends AppCompatActivity {
         setContentView(R.layout.chapter_view_activity);
         listview = findViewById(R.id.chapterlist);
 
+        Intent i = getIntent();
+        String toolbars6_1 = i.getStringExtra("Std6_1");
+        String toolbars6_2 = i.getStringExtra("Std6_2");
+
         ArrayAdapter<String> arr;
         arr = new ArrayAdapter<String>(
                 this, R.layout.chapter_list_row,R.id.chapter_row, tutorials);

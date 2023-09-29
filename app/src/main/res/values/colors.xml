@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    <color name="color_primary">#FF311c50</color>-->
-    <color name="color_primary">#FF292949</color>
-    <color name="color_primaryDark">#FF2b1946</color>
+<!--    <color name="color_primary">#FF292949</color>-->
+    <color name="color_primary">#FF27253d</color>
+    <color name="color_primaryDark">#FF231834</color>
+<!--    <color name="color_primaryDark">#FF2b1946</color>-->
     <color name="colorAccent">#FFFFFFFF</color>
     <color name="textcolor_primary">#FFFFFFFF</color>
     <color name="navigationBarColor">#FF513973</color>
