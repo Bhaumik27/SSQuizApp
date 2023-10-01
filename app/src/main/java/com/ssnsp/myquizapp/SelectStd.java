@@ -37,7 +37,7 @@ public class SelectStd extends AppCompatActivity {
                 startActivity(intent);*/
 
                 Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("Std6_1", "Std6 Sem-1");
+                intent.putExtra("std", "Std 6 Sem-1");
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class SelectStd extends AppCompatActivity {
                 startActivity(intent);*/
 
                 Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("Std6_2", "Std6 Sem-2");
+                intent.putExtra("std", "Std 6 Sem-2");
                 startActivity(intent);
             }
         });
@@ -56,16 +56,16 @@ public class SelectStd extends AppCompatActivity {
         btn7_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
-                intent.putExtra("Std7_1", "Std7 Sem-1");
+                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
+                intent.putExtra("std", "Std 7 Sem-1");
                 startActivity(intent);
             }
         });
         btn7_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
-                intent.putExtra("Std7_2", "Std7 Sem-2");
+                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
+                intent.putExtra("std", "Std 7 Sem-2");
                 startActivity(intent);
             }
         });
@@ -73,16 +73,16 @@ public class SelectStd extends AppCompatActivity {
         btn8_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
-                intent.putExtra("Std8_1", "Std8 Sem-1");
+                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
+                intent.putExtra("std", "Std 8 Sem-1");
                 startActivity(intent);
             }
         });
         btn8_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,SecondActivity.class);
-                intent.putExtra("Std8_2", "Std8 Sem-2");
+                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
+                intent.putExtra("std", "Std 8 Sem-2");
                 startActivity(intent);
             }
         });

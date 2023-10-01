@@ -12,9 +12,11 @@ import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class ChapterViewActivity extends AppCompatActivity {
     ListView listview;
+    Toolbar toolbar;
     String tutorials[]
             = { "1. Algorithms", "2. Data Structures",
             "3. Languages", "4. Interview Corner",
@@ -26,10 +28,11 @@ public class ChapterViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chapter_view_activity);
         listview = findViewById(R.id.chapterlist);
+        toolbar = findViewById(R.id.toolbar);
 
         Intent i = getIntent();
-        String toolbars6_1 = i.getStringExtra("Std6_1");
-        String toolbars6_2 = i.getStringExtra("Std6_2");
+        String toolbarstd = i.getStringExtra("std");
+        toolbar.setTitle(toolbarstd);
 
         ArrayAdapter<String> arr;
         arr = new ArrayAdapter<String>(

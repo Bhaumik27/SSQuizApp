@@ -5,10 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.ssnsp.myquizapp.SelectStd"
     android:background="@drawable/gradient_drawable">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/lnr_1"
+        android:padding="5dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_drawable">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_1"
+            android:layout_centerInParent="true"
+            android:text="Std-6"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="NotSibling" />
+        <LinearLayout
+            android:id="@+id/l6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv6"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+            <Button
+                android:id="@+id/btn6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem-1"/>
+            <Button
+                android:id="@+id/btn6_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Sem-2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--<TextView
         android:id="@+id/tv6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,9 +77,50 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:text="Sem-2"/>
-    </LinearLayout>
+    </LinearLayout>-->
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/lnr_2"
+        android:layout_below="@+id/lnr_1"
+        android:padding="5dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_drawable">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Std-7"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:id="@+id/l7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv7"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+            <Button
+                android:id="@+id/btn7_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem-1"/>
+            <Button
+                android:id="@+id/btn7_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Sem-2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- <TextView
         android:id="@+id/tv7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,9 +146,52 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:text="Sem-2"/>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/lnr_3"
+        android:layout_below="@+id/lnr_2"
+        android:padding="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_drawable">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/tv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l7"
+            android:layout_centerInParent="true"
+            android:text="Std-8"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:id="@+id/l8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv8"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+            <Button
+                android:id="@+id/btn8_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem-1"/>
+            <Button
+                android:id="@+id/btn8_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Sem-2"/>
+        </LinearLayout>
     </LinearLayout>
 
-    <TextView
+    <!--<TextView
         android:id="@+id/tv8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,5 +218,5 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:text="Sem-2"/>
-    </LinearLayout>
+    </LinearLayout>-->
 </RelativeLayout>
