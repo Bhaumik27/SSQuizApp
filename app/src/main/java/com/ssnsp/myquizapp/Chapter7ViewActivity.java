@@ -40,7 +40,7 @@ public class Chapter7ViewActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                Intent intent = new Intent(Chapter7ViewActivity.this, std7.class);
+                Intent intent = new Intent(Chapter7ViewActivity.this, std6_ch2.class);
                 startActivity(intent);
             }
         });

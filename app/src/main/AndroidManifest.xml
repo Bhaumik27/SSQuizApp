@@ -43,7 +43,13 @@
         <activity android:name=".SecondActivity"
             android:exported="false"
             android:theme="@style/Theme.MyQuizApp.AppTheme"/>
-        <activity android:name=".std7"
+        <activity android:name=".std6_ch2"
+            android:exported="false"
+            android:theme="@style/Theme.MyQuizApp.AppTheme"/>
+        <activity android:name=".std6_ch3"
+            android:exported="false"
+            android:theme="@style/Theme.MyQuizApp.AppTheme"/>
+        <activity android:name=".std6_ch4"
             android:exported="false"
             android:theme="@style/Theme.MyQuizApp.AppTheme"/>
     </application>
