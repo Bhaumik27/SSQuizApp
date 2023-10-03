@@ -22,7 +22,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SecondActivity extends AppCompatActivity {
+public class std7 extends AppCompatActivity {
     private TextView questionTextView;
     private TextView pointTextView;
     private RadioGroup answerRadioGroup;
@@ -61,7 +61,7 @@ public class SecondActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("SecondActivity", "questionsList size: " + questionsList.size());
+                Log.d("std7", "questionsList size: " + questionsList.size());
                 checkAnswer();
             }
         });
@@ -84,7 +84,7 @@ public class SecondActivity extends AppCompatActivity {
             radioButtonC.setText(question.getOpt_C());
             radioButtonD.setText(question.getOpt_D());
         } else {
-            Log.d("SecondActivity:", "All questions displayed");
+            Log.d("std7:", "All questions displayed");
         }
     }
 
@@ -123,7 +123,7 @@ public class SecondActivity extends AppCompatActivity {
             } else {
                 // Quiz completed
                 //Toast.makeText(this, "Quiz completed!", Toast.LENGTH_SHORT).show();
-                Intent intent  = new Intent(SecondActivity.this,FinalResultActivity.class);
+                Intent intent  = new Intent(std7.this,FinalResultActivity.class);
                 intent.putExtra("QuestionList", (Serializable) questionsList);
                 intent.putExtra("CorrectCount", pointTextView.getText());
                 startActivity(intent);
@@ -136,7 +136,7 @@ public class SecondActivity extends AppCompatActivity {
 
     private void firebaseQuestion() {
         try {
-            myRef.child("std - 6").child("Questions").child("ch1").addListenerForSingleValueEvent(new ValueEventListener() {
+            myRef.child("std - 7").child("Questions").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
@@ -150,17 +150,17 @@ public class SecondActivity extends AppCompatActivity {
                         // Start displaying questions
                         displayQuestion();
                     } else {
-                        Log.d("SecondActivity:", "No data");
+                        Log.d("std7:", "No data");
                     }
                 }
 
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-                    Log.d("SecondActivity:", "No error");
+                    Log.d("std7:", "No error");
                 }
             });
         } catch (Exception e) {
-            Log.d("SecondActivity:", "Error: " + e.getMessage());
+            Log.d("std7:", "Error: " + e.getMessage());
         }
     }
 

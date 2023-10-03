@@ -8,7 +8,10 @@
     <color name="textcolor_primary">#FFFFFFFF</color>
     <color name="navigationBarColor">#FF513973</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#6A42BC</color>
+    <color name="colorPrimaryDark">#4E2C93</color>
+
     <color name="lightGreen">#FF536976</color>
     <color name="darkblue">#FF292e49</color>
 </resources>

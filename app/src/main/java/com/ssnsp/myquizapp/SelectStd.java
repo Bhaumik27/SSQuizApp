@@ -6,11 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.ssnsp.myquizapp.R;
 
 public class SelectStd extends AppCompatActivity {
-
     private Button btn6_1;
     private Button btn6_2;
     private Button btn7_1;
@@ -44,46 +44,34 @@ public class SelectStd extends AppCompatActivity {
         btn6_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent intent = new Intent(SelectStd.this,SecondActivity.class);
-                startActivity(intent);*/
-
-                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("std", "Std 6 Sem-2");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
             }
         });
 
         btn7_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("std", "Std 7 Sem-1");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
+
             }
         });
         btn7_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("std", "Std 7 Sem-2");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
             }
         });
 
         btn8_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("std", "Std 8 Sem-1");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
             }
         });
         btn8_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectStd.this,ChapterViewActivity.class);
-                intent.putExtra("std", "Std 8 Sem-2");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
             }
         });
 

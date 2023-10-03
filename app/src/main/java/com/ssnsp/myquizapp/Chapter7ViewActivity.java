@@ -1,8 +1,5 @@
 package com.ssnsp.myquizapp;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,14 +11,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class ChapterViewActivity extends AppCompatActivity {
+public class Chapter7ViewActivity extends AppCompatActivity {
     ListView listview;
     Toolbar toolbar;
     String tutorials[]
-            = { "1. ઈતિહાસ જાણવાના સ્ત્રોત",
-            "2. આદિમાનવના સ્થાયી જીવનની શરૂઆત",
-            "3. પ્રાચીન નગરો અને ગ્રંથો",
-            "4. ભારતની પ્રારંભિક રાજ્યવ્યવસ્થા"};
+            = { "1. Algorithms", "2. Data Structures",
+            "3. Languages", "4. Interview Corner",
+            "5. GATE", "6. ISRO CS",
+            "7. UGC NET CS", "8. CS Subjects",
+            "9. Web Technologies" };
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +40,7 @@ public class ChapterViewActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                Intent intent = new Intent(ChapterViewActivity.this, SecondActivity.class);
+                Intent intent = new Intent(Chapter7ViewActivity.this, std7.class);
                 startActivity(intent);
             }
         });
